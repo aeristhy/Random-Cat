@@ -28,4 +28,5 @@ client.on('message', message => {
 	};
 });
 
+//Login to discord
 client.login(config.token);
