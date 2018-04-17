@@ -1,0 +1,15 @@
+{
+  "name": "Random-Cat",
+  "version": "0.0.1",
+  "description": "A basic bot to help you get started with using the random.cat cat API.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aerisDoesCodes",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "snekfetch": "^3.6.1"
+  }
+}
