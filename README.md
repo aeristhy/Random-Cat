@@ -1,13 +1,8 @@
-# Cat command
-
-## Requirements
-
-[Git](https://git-scm.com)
+## Requirements  
+[Git](https://git-scm.com)  
 [Node.js](https://nodejs.org)
 
-## Cloning
-
-
+## Cloning  
 Step 1:
 > Click "Clone or download" and click the clipboard icon.
 ![](https://cdn.discordapp.com/attachments/248014822082347008/393370824943599616/Untitled.png)
@@ -18,27 +13,23 @@ Step 2:
 ![](https://cdn.discordapp.com/attachments/248014822082347008/393372219897675777/Untitled.png)
 
 Step 3:
-Assuming you still got your terminal open, type `git clone` and paste the URL you copied before, it should look like the following:  
-`git clone https://github.com/aerisDoesCodes/Random-Cat.git`
+> Assuming you still got your terminal open, type `git clone` and paste the URL you copied before, it should look like the following:  
+`git clone https://github.com/aerisDoesCodes/Random-Cat.git`.
 ![](https://cdn.discordapp.com/attachments/248014822082347008/393373480009072641/Untitled.png)
 
-## Installing dependents
-
+## Installing dependents  
 ```
 $ npm i
 ```
 
-## Starting Bot
-
+## Starting Bot  
 ```
 $ pm2 start bot.js --name "cat"
 ```
 
-## Note
+## Extra  
+Don't forget to change the config.example.json file to config.json once you've put your details in.
 
-DON'T FORGET TO CHANGE `config.example.json` to `config.json`
-
-## Description
-
+## Description  
 Cats are grabbed and returned via the following API:  
 [random.cat](https://random.cat/meow).
