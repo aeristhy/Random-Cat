@@ -1,49 +1,44 @@
 const Discord = require('discord.js');
-
-//Defined it as client
-const client = new Discord.Client();
-
+const { get } = require("snekfetch"); 
 const config = require('./config.json');
 
-//Insert bot prefix
-const prefix = '=='
+// Declare and define your client constant
+const client = new Discord.Client();
 
-//Install snekfetch (npm install snekfetch)
-const {get} = require("snekfetch"); 
+// The bot's prefix
+const prefix = '==';
 
-//Embed
-const embed = new Discord.RichEmbed();
-
-client.on('ready', () =>{
-	console.log('I am ready!')
+client.on('ready', () => {
+	console.log('I am ready!');
+	// For an activity, do: 
+	// client.user.setActivity('Name of activity');
 });
 
-
-client.on('message', message => {
-
-	//Random Cat in Embed file
-	if (message.content.startsWith(prefix + 'embed-cat')) {
+client.on('message', msg => {
+	// Embedded
+	if(msg.content.startsWith(prefix + 'ecat')) {
 		try {
-			get('https://random.cat/meow').then(response => {
-				embed.setImage(response.body.file);
-				message.channel.send({embed});
+			get('https://aws.random.cat/meow').then(res => {
+				const embed = new Discord.RichEmbed()
+				.setImage(res.body.file)
+				return msg.channel.send({embed});
 			});
-		} catch (error) {
-			return message.channel.send(error.stack);
+		} catch(err) {
+			return msg.channel.send(error.stack);
 		}
-	};
-
-	if (message.content.startsWith(prefix + 'cat')) {
+	}
+	
+	// Non-embedded
+	if(msg.content.startsWith(prefix + 'cat')) {
 		try {
-			get('https://random.cat/meow').then(response => {
-				message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
+			get('https://aws.random.cat/meow').then(res => {
+				return message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
 			});
-		} catch (e) {
-			return message.channel.send(e.stack);
+		} catch(err) {
+			return msg.channel.send(error.stack);
 		}
-	};
-
+	}
 });
 
-//Login to discord
+// Start the client
 client.login(config.token);
