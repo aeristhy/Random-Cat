@@ -1,4 +1,4 @@
-# Cat Command
+# Cat command
 
 ## Requirements
 
