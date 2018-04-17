@@ -30,6 +30,5 @@ $ pm2 start bot.js --name "cat"
 ## Extra  
 Don't forget to change the config.example.json file to config.json once you've put your details in.
 
-## Description  
 Cats are grabbed and returned via the following API:  
 [random.cat](https://random.cat/meow).
