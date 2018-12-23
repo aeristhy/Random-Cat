@@ -32,10 +32,10 @@ client.on('message', msg => {
 	if(msg.content.startsWith(prefix + 'cat')) {
 		try {
 			get('https://aws.random.cat/meow').then(res => {
-				return message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
+				return msg.channel.send({files: [{attachment: res.body.file, name: `cat.${res.body.file.split('.')[2]}`}]});
 			});
 		} catch(err) {
-			return msg.channel.send(error.stack);
+			return msg.channel.send(err.stack);
 		}
 	}
 });
