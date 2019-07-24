@@ -24,7 +24,7 @@ client.on('message', msg => {
 				return msg.channel.send({embed});
 			});
 		} catch(err) {
-			return msg.channel.send(error.stack);
+			return msg.channel.send(err.stack);
 		}
 	}
 	
