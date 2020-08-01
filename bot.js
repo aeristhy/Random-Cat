@@ -14,28 +14,28 @@ client.on('ready', () => {
 	// client.user.setActivity('Name of activity');
 });
 
-client.on('message', msg => {
+client.on('message', async message => {
 	// Embedded
-	if(msg.content.startsWith(prefix + 'ecat')) {
+	if(message.content.startsWith(prefix + 'ecat')) {
 		try {
 			get('https://aws.random.cat/meow').then(res => {
-				const embed = new Discord.RichEmbed()
+				const embed = new Discord.MessageEmbed()
 				.setImage(res.body.file)
-				return msg.channel.send({embed});
+				return message.channel.send({embed});
 			});
 		} catch(err) {
-			return msg.channel.send(err.stack);
+			return message.channel.send(err.stack);
 		}
 	}
 	
 	// Non-embedded
-	if(msg.content.startsWith(prefix + 'cat')) {
+	if(message.content.startsWith(prefix + 'cat')) {
 		try {
 			get('https://aws.random.cat/meow').then(res => {
-				return msg.channel.send({files: [{attachment: res.body.file, name: `cat.${res.body.file.split('.')[2]}`}]});
+				return message.channel.send({files: [{attachment: res.body.file, name: `cat.${res.body.file.split('.')[2]}`}]});
 			});
 		} catch(err) {
-			return msg.channel.send(err.stack);
+			return message.channel.send(err.stack);
 		}
 	}
 });
