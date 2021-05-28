@@ -12,7 +12,9 @@ const prefix = '!';
 client.on('ready', () => {
 	console.log('I am ready!');
 	// For an activity, do: 
-	// client.user.setActivity('Name of activity');
+	client.user.setActivity('a cat', {
+		type: 'WATCHING'
+	})
 });
 
 client.on('message', async message => {
