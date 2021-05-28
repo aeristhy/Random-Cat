@@ -1,5 +1,5 @@
 {
-  "name": "Random-Cat",
+  "name": "random-cat",
   "version": "1.0.2",
   "description": "A basic bot to help you get started with using the random.cat API.",
   "main": "bot.js",
