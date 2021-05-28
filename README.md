@@ -14,7 +14,7 @@ Step 2:
 
 Step 3:
 > Assuming you still got your terminal open, type `git clone` and paste the URL you copied before, it should look like the following:  
-`git clone https://github.com/aerisDoesCodes/Random-Cat.git`.
+`git clone https://github.com/aeristhy/Random-Cat.git`.
 ![](https://cdn.discordapp.com/attachments/248014822082347008/393373480009072641/Untitled.png)
 
 ## Installing dependents  
