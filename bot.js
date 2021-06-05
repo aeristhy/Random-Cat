@@ -64,6 +64,7 @@ client.on('ready', async () => {
 
 	client.ws.on('INTERACTION_CREATE', async (interaction) => {
 		const { name }  = interaction.data
+		if(!name) return;
 		const command = name.toLowerCase();
 
 		if(command === 'test') {

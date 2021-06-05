@@ -1,6 +1,6 @@
 {
   "name": "random-cat",
-  "version": "3.0",
+  "version": "3.0.1",
   "description": "A basic bot to help you get started with using the random.cat API.",
   "main": "bot.js",
   "scripts": {
