@@ -118,21 +118,25 @@ const APIMessage = async (interaction, content) => {
 client.on('clickButton', (button, message) => {
 	if (button.id == 'ping_pong') {
 		button.defer();
-		button.message.edit("Pong!");
+		button.message.delete();
+		button.channel.send("Pong!");
 	} else if (button.id == 'embed_cats') {
 		button.defer();
+		button.message.delete();
 		get('https://aws.random.cat/meow').then(res => {
 			const embed = new Discord.MessageEmbed()
 			.setImage(res.body.file);
-			button.message.edit({embed});
+			button.channel.send({embed});
 		});
 	} else if (button.id == 'link_cats') {
 		button.defer();
+		button.message.delete();
 		get('https://aws.random.cat/meow').then(res => {
-			button.message.edit(res.body.file);
+			button.channel.send(res.body.file);
 		});
 	} else if (button.id == 'file_cats') {
 		button.defer();
+		button.message.delete();
 		get('https://aws.random.cat/meow').then(res => {
 			const test1 = new MessageAttachment(res.body.file);
 			button.channel.send(test1);
@@ -174,9 +178,9 @@ client.on('message', async message => {
 		.addComponent(cat2x)
 
 		
-		message.channel.send("Click the buttons bellow for the commands!",{
+		message.channel.send(`Click the buttons bellow for the commands!\n\nRequested by: ${message.author.username}#${message.author.discriminator}`,{
 			component: btns
-		})
+		});
 	}
 	
 	if (message.content.startsWith(prefix + 'ping')) {
