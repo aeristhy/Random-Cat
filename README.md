@@ -17,8 +17,8 @@ Step 3:
 ![](https://media.discordapp.net/attachments/419724812592611340/847942817434173550/xebWHZnf.png)
 
 Step 4:
-> To start your bot, type in `node bot.js` and have fun!
-![](https://media.discordapp.net/attachments/419724812592611340/847943884850855947/2D9z2PDG.png)
+> Go inside `./src` folder to start your bot, type in `node bot.js` and have fun!
+![](https://media.discordapp.net/attachments/419724812592611340/851103492755423232/wAMsNfoP.png)
 
 ## Extra  
 Don't forget to change the `config.example.json` file to `config.json` once you've put your [token](https://discord.com/developers/applications) in.
