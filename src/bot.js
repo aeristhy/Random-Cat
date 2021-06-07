@@ -45,7 +45,9 @@ client.on('clickButton', (button, message) => {
 		get('https://aws.random.cat/meow').then(res => {
 			const embed = new Discord.MessageEmbed()
 			.setImage(res.body.file);
-			button.channel.send({embed});
+			button.channel.send({
+				embed
+			});
 		});
 	} else if (button.id == 'link_cats') {
 		button.defer();
@@ -69,9 +71,9 @@ client.on('message', async message => {
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
-	
-	const command = client.commands.get(commandName)
-		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+	const command = client.commands.get(commandName) ||
+		client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
 	if (!command) return;
 
@@ -90,7 +92,8 @@ client.on('message', async message => {
 		let reply = 'You didn\'t provide any arguments!';
 		if (command.usage) {
 			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
-		} return message.channel.send(reply);
+		}
+		return message.channel.send(reply);
 	}
 
 	const { cooldowns } = client;
