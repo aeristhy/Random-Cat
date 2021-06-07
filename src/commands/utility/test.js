@@ -3,8 +3,10 @@ module.exports = {
     args: true,
     aliases: ['xd'],
     usage: '<test>',
-    guildOnly: false,
+    guildOnly: true,
+    permissions: 'ADMINISTRATOR',
 	description: 'test!',
+    category: 'Utility',
 	execute(message, args) {
         message.channel.send(args.join(" "));
 	},

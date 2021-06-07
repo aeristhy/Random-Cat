@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 5,
     permissions: ['ATTACH_FILES', 'EMBED_LINKS'],
 	description: 'Sends cats with Discord Buttons!',
+    category: 'Cats',
 	execute(message, args) {
 
             const ping1 = new MessageButton()

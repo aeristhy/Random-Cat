@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 5,
     permissions: 'EMBED_LINKS',
 	description: 'Sends cats with Embed!',
+    category: 'Cats',
 	execute(message, args) {
 		try{
             get('https://aws.random.cat/meow').then(res => {

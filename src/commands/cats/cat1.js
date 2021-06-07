@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 5,
     permissions: 'ATTACH_FILES',
 	description: 'Sends cats with file attachment!',
+    category: 'Cats',
 	execute(message, args) {
 		try{
             get('https://aws.random.cat/meow').then(res => {
