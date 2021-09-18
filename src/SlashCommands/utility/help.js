@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, interaction, message) => {
         const embed = new MessageEmbed()
         .setTitle('Random Cat')
-        .setDescription(`Hey, there! I am a Open Source Discord bot that send random cat images.\n`+
+        .setDescription(`Hey, <@${interaction.user.id}>! I am a Open Source Discord bot that send random cat images.\n`+
         'To selfhost me, follow this instructions [in my github](https://github.com/aeristhy/Random-Cat)\n\n'+
         'Here are my commands:\n'+
         '▫️ `/ping`\n▫️ `/cat`\n\n')
