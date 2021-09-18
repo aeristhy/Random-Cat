@@ -21,7 +21,7 @@ Step 4:
 ![](https://media.discordapp.net/attachments/419724812592611340/888775597164216320/asdsadsads.png)
 
 ## Extra  
-Don't forget to change the `example.env` file to `.env` once you've put your [token](https://discord.com/developers/applications) in.
+Don't forget to change the `.env.example` file to `.env` once you've put your [token](https://discord.com/developers/applications) in.
 
 Cats are grabbed and returned via the following API:  
 [no-api-key.com/api/v1/animals/cat](https://no-api-key.com/api/v1/animals/cat).
