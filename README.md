@@ -17,11 +17,11 @@ Step 3:
 ![](https://media.discordapp.net/attachments/419724812592611340/847942817434173550/xebWHZnf.png)
 
 Step 4:
-> Go inside `./src` folder to start your bot, type in `node bot.js` and have fun!
-![](https://media.discordapp.net/attachments/419724812592611340/851103492755423232/wAMsNfoP.png)
+> Go inside `cd src` folder to start your bot, type in `npm run start` and have fun!
+![](https://media.discordapp.net/attachments/419724812592611340/888775597164216320/asdsadsads.png)
 
 ## Extra  
-Don't forget to change the `config.example.json` file to `config.json` once you've put your [token](https://discord.com/developers/applications) in.
+Don't forget to change the `example.env` file to `.env` once you've put your [token](https://discord.com/developers/applications) in.
 
 Cats are grabbed and returned via the following API:  
-[aws.random.cat](https://aws.random.cat/meow).
+[no-api-key.com/api/v1/animals/cat](https://no-api-key.com/api/v1/animals/cat).
