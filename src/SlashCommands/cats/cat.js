@@ -1,4 +1,4 @@
-const { CommandInteraction, MessageEmbed, MessageAttachment } = require('discord.js');
+const { CommandInteraction, MessageEmbed } = require('discord.js');
 const axios = require('axios');
 
 module.exports = {
@@ -23,7 +23,6 @@ module.exports = {
      * @param {Client} client
      * @param {CommandInteraction} interaction
      * @param {String[]} args
-     * @param {MessageAttachment} attachment
      */
      run: async (client, interaction, args) => {
          if(interaction.options.getSubcommand() === 'embed') {

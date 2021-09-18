@@ -32,7 +32,7 @@ module.exports = async (client) => {
     client.on("ready", async () => {
         // Register for a single guild
         await client.guilds.cache
-            .get("ADD A TEST GUILD(Guild ID)")
+            .get("419724812592611338")
             .commands.set(arrayOfSlashCommands);
 
 
