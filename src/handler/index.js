@@ -41,7 +41,7 @@ module.exports = async (client) => {
     });
 
     // mongoose
-    const { mongooseConnectionString } = process.env.MONGO_URI;
+    const mongooseConnectionString = process.env.DATABASE_URL;
     if (!mongooseConnectionString) return;
 
     mongoose.connect(mongooseConnectionString).then(() => console.log('Connected to mongodb'));
