@@ -1,0 +1,30 @@
+{
+    "name": "random-cat",
+    "version": "5.0.0",
+    "description": "A basic bot to help you get started with using the no-api-key.com/api/v1/animals/cat API.",
+    "main": "./src/index.js",
+    "type": "commonjs",
+    "scripts": {
+        "test": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aeristhy/Random-Cat.git"
+    },
+    "bugs": {
+        "url": "https://github.com/aeristhy/Random-Cat/issues"
+    },
+    "homepage": "https://github.com/aeristhy/Random-Cat/#readme",
+    "author": "aeristhy",
+    "license": "ISC",
+    "dependencies": {
+        "@discordjs/builders": "0.6.0",
+        "axios": "^0.21.4",
+        "discord.js": "^13.1.0",
+        "dotenv": "^10.0.0",
+        "glob": "^7.1.7",
+        "got": "^11.8.2",
+        "mongoose": "^6.0.2"
+    }
+}
