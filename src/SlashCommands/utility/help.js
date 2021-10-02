@@ -11,7 +11,6 @@ module.exports = {
      * @param {Message} message
      */
     run: async (client, interaction, message) => {
-        console.log(client.slashCommands)
         const embed = new MessageEmbed()
         .setTitle('Random Cat')
         .setDescription(`Hey, there! I am a Open Source Discord bot that send random cat images.\n`+
