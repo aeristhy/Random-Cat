@@ -16,7 +16,7 @@ module.exports = {
         .setDescription(`Hey, <@${interaction.user.id}>! I am a Open Source Discord bot that send random cat images.\n`+
         'To selfhost me, follow this instructions [in my github](https://github.com/aeristhy/Random-Cat)\n\n'+
         'Here are my commands:\n'+
-        '▫️ `/ping`\n▫️ `/cat`\n\n')
+        `▫️ ${client.slashCommands.map(c => `\`/${c.name}\``).join('\n▫️ ')}`)
 
         interaction.followUp({ embeds: [embed] });
     },
