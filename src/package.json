@@ -1,6 +1,6 @@
 {
     "name": "random-cat",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "description": "A basic bot to help you get started with using the no-api-key.com/api/v1/animals/cat API.",
     "main": "./src/index.js",
     "type": "commonjs",
